@@ -72,7 +72,7 @@ pub enum Verbosity {
     Serialize,
     Deserialize,
 )]
-#[serde(try_from = "u16", into = "u16")]
+#[serde(from = "u16", into = "u16")]
 #[cfg_attr(any(test, feature = "test"), derive(Arbitrary))]
 #[repr(u16)]
 pub enum ActivityType {
